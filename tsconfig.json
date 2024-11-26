@@ -1,0 +1,23 @@
+{
+	"include": [
+		"src"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	],
+	"compilerOptions": {
+		"strict": true,
+		"skipLibCheck": true,
+		"lib": [
+			"es2022"
+		],
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"baseUrl": ".",
+		"outDir": "dist",
+		"types": [
+			"@cloudflare/workers-types"
+		]
+	}
+}

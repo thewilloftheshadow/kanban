@@ -1,0 +1,19 @@
+{
+    "name": "kanban",
+    "private": true,
+    "type": "module",
+    "main": "./src/index.ts",
+    "scripts": {
+        "dev": "wrangler dev --port 3000",
+        "deploy": "wrangler deploy",
+        "wrangler": "wrangler"
+    },
+    "dependencies": {
+        "@buape/carbon": "0.0.0-beta-20241027215537"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "4.20241112.0",
+        "typescript": "5.7.2",
+        "wrangler": "3.90.0"
+    }
+}

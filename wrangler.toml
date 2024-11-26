@@ -1,0 +1,8 @@
+name = "kanban"
+main = "src/index.ts"
+compatibility_date = "2024-11-26"
+
+kv_namespaces = [{ binding = "db", id = "8d74386dc6824ef9837b6b9e7f961580" }]
+
+[observability]
+enabled = true
