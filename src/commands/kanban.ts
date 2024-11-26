@@ -157,7 +157,11 @@ class Delete extends Command {
         const tasker = new Tasker(this.env, interaction.userId)
         const tasks = await tasker.getTasks()
         const ids = tasks.map(task => { return { name: task.title, value: task.id } })
-        await interaction.respond(ids)
+
+        const typed = interaction.options.getString("id", true)
+        if (typed.length < 1) return await interaction.respond(ids)
+        const filtered = ids.filter(id => id.name.toLowerCase().includes(typed.toLowerCase()))
+        await interaction.respond(filtered)
     }
 }
 
@@ -216,6 +220,10 @@ class Move extends Command {
         const tasker = new Tasker(this.env, interaction.userId)
         const tasks = await tasker.getTasks()
         const ids = tasks.map(task => { return { name: task.title, value: task.id } })
-        await interaction.respond(ids)
+
+        const typed = interaction.options.getString("id", true)
+        if (typed.length < 1) return await interaction.respond(ids)
+        const filtered = ids.filter(id => id.name.toLowerCase().includes(typed.toLowerCase()))
+        await interaction.respond(filtered)
     }
 }
